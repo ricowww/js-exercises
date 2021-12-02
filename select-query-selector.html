@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Selector and Select</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+    <!--selector box-->
+    <label for="weather">Select the weather type today:</label>
+    <select id="weather">
+        <option value="">--Make a choice--</option>
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowing">Snowing</option>
+        <option value="overcast">Overcast</option>
+    </select>
+
+    <!--message line-->
+
+    <p></p>
+
+
+  <script>
+    // Your JavaScript goes here!
+    
+    
+    const select = document.querySelector('select');
+    const para = document.querySelector('p');
+
+    select.addEventListener('change', setWeather);
+
+    //function which changes message based on selected choice
+    
+    function setWeather() {
+        const choice = select.value;
+
+        if (choice === 'sunny') {
+            para.textContent = 'Wear goddam shorts';
+        } else if (choice === 'rainy') {
+            para.textContent = 'Go skinny-dipping';
+        } else if (choice === 'snowing') {
+            para.textContent = 'Build a killer snowman';
+        } else if (choice === 'overcast') {
+            para.textContent = 'Go cloud-bathing';
+        } else {
+            para.textContent = '';
+        }
+    }
+
+  </script>
+
+</body>
+</html>
