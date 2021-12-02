@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+  <style>
+      ul {
+          display:flex;
+          flex-wrap:wrap;
+          justify-content: flex-start;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          gap: 5px;
+      }
+      li {
+          padding: 30px 0px;
+          background-color:blue;
+          text-align:center;
+          align-items:center;
+          flex: 0 0 12.5%;
+          
+      }
+
+  </style>
+</head>
+
+<body>
+    <!--selector-->
+    <label for="month">Choose a month:</label>
+    <select id="month">
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+    </select>
+
+    <h1></h1>
+    <ul></ul>
+
+    <!--various ul with id=29,30,31-->
+    
+  <script>
+//declare variables which will be read (select) modified (ul) and (h1)
+const select = document.querySelector('select');
+const list = document.querySelector('ul');
+const h1 = document.querySelector('h1');
+
+function createCalendar(days, choice) {
+  list.innerHTML = '';
+  h1.textContent = choice;
+  for (let i = 1; i <= days; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = i;
+    list.appendChild(listItem);
+  }
+}
+
+//object.onchange = function(){myScript};
+//trigger upon changing select selection
+//note choice also declared here
+//puts selection from dropdown into the choice constant
+//update//conditionals are working//separate declaration of const and its value breaks it because const values cannot be reassigned
+//const is funky so I used var instead
+select.onchange = function() {
+  const choice = select.value;
+  if (choice === 'january' ||choice === 'march' || choice === 'may' ||choice === 'july' ||choice === 'august' ||choice === 'october' ||choice === 'december') {
+      var days = 31;
+  } else if (choice === 'april' ||choice === 'june' || choice === 'september' ||choice === 'november') {
+      var days = 30;
+  } else if (choice === 'february') {
+      var days = 28;
+  } else {
+      var days = 1;
+  }
+
+  createCalendar(days, choice);
+}
+
+
+
+//keep this so that we have a default calendar
+createCalendar(31,'January');
+
+  </script>
+</body>
+</html>

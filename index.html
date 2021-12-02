@@ -705,11 +705,21 @@
 //alert(5 || 7 || 10 || 20);//5
 
 //simple ifelse
-let isBirthday = false;
-let greeting = (isBirthday) ? 'Happy birthday Mrs. Smith - we hope you have a great day!': 'Good morning Mrs. Smith.';
-alert(greeting);
+//let isBirthday = false;
+//let greeting = (isBirthday) ? 'Happy birthday Mrs. Smith - we hope you have a great day!': 'Good morning Mrs. Smith.';
+//alert(greeting);
 
-
+const choice = 'february';
+  if (choice === 'january' ||choice === 'march' || choice === 'may' ||choice === 'july' ||choice === 'august' ||choice === 'october' ||choice === 'december') {
+      var days = 31;
+  } else if (choice === 'april' ||choice === 'june' || choice === 'september' ||choice === 'november') {
+    var days = 30;
+  } else if (choice === 'february') {
+    var days = 28;
+  } else {
+    var days = 1;
+  }
+alert(days);
     
    </script>
 <body/>
