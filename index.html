@@ -709,18 +709,167 @@
 //let greeting = (isBirthday) ? 'Happy birthday Mrs. Smith - we hope you have a great day!': 'Good morning Mrs. Smith.';
 //alert(greeting);
 
-const choice = 'february';
-  if (choice === 'january' ||choice === 'march' || choice === 'may' ||choice === 'july' ||choice === 'august' ||choice === 'october' ||choice === 'december') {
-      var days = 31;
-  } else if (choice === 'april' ||choice === 'june' || choice === 'september' ||choice === 'november') {
-    var days = 30;
-  } else if (choice === 'february') {
-    var days = 28;
-  } else {
-    var days = 1;
-  }
-alert(days);
-    
+//const choice = 'february';
+//  if (choice === 'january' ||choice === 'march' || choice === 'may' ||choice === 'july' ||choice === 'august' ||choice === 'october' ||choice === 'december') {
+//      var days = 31;
+//  } else if (choice === 'april' ||choice === 'june' || choice === 'september' ||choice === 'november') {
+//    var days = 30;
+//  } else if (choice === 'february') {
+//    var days = 28;
+//  } else {
+//    var days = 1;
+//  }
+//alert(days);
+
+//prompt and a simple if statement with multiple actions
+//let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+//if (year == 2015) 
+//  alert( 'You are right!' );
+//  alert( "That's correct!" );
+//  alert( "You're so smart!" );    
+
+//A number 0, an empty string "", null, undefined, and NaN all become false. Because of that they are called “falsy” values.
+//Other values become true, so they are called “truthy”.
+//So, the code under this condition would never execute:
+//if (0) {alert('ehem') // 0 is falsy
+//}
+
+//let age = prompt('How old are you?', '');
+//let accessAllowed = (age > 18) ? true : false;
+//alert(accessAllowed);
+
+//? can be chained
+//let age = prompt('age', 18);
+//
+//let message = (age < 3) ? 'Hi, baby!' :
+//    (age < 18) ? 'Hello!':
+//    (age < 100) ? 'Greetings!':
+//    'What an unsusual age!';
+//alert(message);
+
+//a zero string will output true
+//if ("0") {
+//  alert( 'Hello' );
+//}
+
+//const correctAnswer = 'ECMAScript'
+//const answerSubmit = prompt("What is the official name of Javascript?", "");
+//if (answerSubmit === correctAnswer) {
+//  alert("You right, good because you are not a dumbazz");
+//} else {
+//  alert("dumbazz");
+//}
+
+
+//const number = Number(prompt("Input Number", ""));
+//if (number > 0) {
+//  alert(1);
+//} else if (number < 0) {
+//  alert(-1);
+//} else if (number == 0) {
+//  alert(0);
+//} else {
+//  alert("undefined");
+//}
+
+//const a = Number(prompt("Input Number", ""));
+//const b = Number(prompt("Input Number", ""));
+//let result;
+//(a + b < 4)? result = 'Below': result = 'Over';
+//alert(result);
+//
+//let result = (a + b < 4) ? 'Below' : 'Over';
+
+//const login = prompt("enter your status, slave","");
+//let message;
+//message = (login == 'Employee')? 'Hello': 
+//  (login == 'Director')? 'Greetings': 
+//  (login == '')? 'No login': '';
+//alert(message);
+
+
+//const day = new Date().getDay();
+//switch (day) {
+//  case 0: 
+//    alert('Sunday');
+//    break;
+//  case 1: 
+//    alert('Monday');
+//    break;
+//  case 2: 
+//    alert('Tuesday');
+//    break;
+//  case 3: 
+//    alert('Wednesday');
+//    break;
+//  case 4: 
+//    alert('Thursday');
+//    break;
+//  case 5: 
+//    alert('Friday');
+//    break;
+//  case 6: 
+//    alert('Saturday');
+//    break;
+//  default:
+//    alert('no day');
+//}
+//
+
+
+//const grade = 87;
+//
+//switch (true) {
+//    // If score is 90 or greater
+//    case grade >= 90:
+//        console.log("A");
+//        break;
+//    // If score is 80 or greater
+//    case grade >= 80:
+//        console.log("B");
+//        break;
+//    // If score is 70 or greater
+//    case grade >= 70:
+//        console.log("C");
+//        break;
+//    // If score is 60 or greater
+//    case grade >= 60:
+//        console.log("D");
+//        break;
+//    // Anything 59 or below is failing
+//    default:
+//        console.log("F");
+//}
+
+
+////to do an OR with switch cases, just string them together
+//const month = new Date().getMonth();
+//switch (month){
+//  case 0:
+//  case 1:
+//  case 2:
+//    console.log('Winter');
+//    break;
+//  case 3:
+//  case 4:
+//  case 5:
+//    console.log('Spring');
+//    break;
+//  case 6:
+//  case 7:
+//  case 8:
+//    console.log('Summer');
+//    break;
+//  case 9:
+//  case 10:
+//  case 11:
+//    console.log('Autumn');
+//    break;
+//  default:
+//    console.log("Ooops");
+//}
+//
+
    </script>
 <body/>
 </html>

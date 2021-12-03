@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This website changes colors</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+    <h1>This website changes colors</h1>
+    <p>Even the paragraphs change color!</p>
+    <label for="theme">Select color theme:</label>
+    <select id="theme">
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Purple">Purple</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Pyschedelic">Pyschedelic</option>
+    </select>
+    
+  <script>
+   
+    //define constants
+    //select is from the selector element
+    //output is the html
+    const select = document.querySelector('select');
+    const html = document.querySelector('html');
+
+    //defines the function
+    //defines the inputs to the function
+    //defines the actions, there are two actions, changing of html and textcolor
+    function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
+    }
+    
+    //trigger
+    //action #1 at change the choice value is pegged to the selection
+    //action #2 is the switch to call the update() function
+    select.onchange = function() {
+        const choice = select.value;
+        
+        switch (choice) {
+            case 'White':
+                update('white','black');
+                break;
+            case 'Black':
+                update('black', 'white');
+                break;
+            case 'Purple':
+                update('purple', 'darkblue');
+                break;
+            case 'Yellow':
+                update('yellow', 'grey');
+                break;
+            case 'Pyschedelic':
+                update('pink','purple');
+                break;
+            default:
+                update('grey','black');
+        } 
+
+    }
+
+
+  </script>
+</body>
+</html>
